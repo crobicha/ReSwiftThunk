@@ -12,7 +12,8 @@
 		27EB4EF61DDB54F000570EDB /* ReSwiftThunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 27EB4EE81DDB54F000570EDB /* ReSwiftThunk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27EB4F001DDB556900570EDB /* ThunkMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB4EFF1DDB556900570EDB /* ThunkMiddleware.swift */; };
 		27EB4F021DDB557100570EDB /* ThunkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB4F011DDB557100570EDB /* ThunkAction.swift */; };
-		3165B8F2C1BD750F46264559 /* Pods_ReSwiftThunk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438492F5F1A75A4902AA3708 /* Pods_ReSwiftThunk.framework */; };
+		39CBEADA1DDF99620052DD78 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CBEAD91DDF99620052DD78 /* ReSwift.framework */; };
+		39CBEADC1DDF998C0052DD78 /* ReSwift.framework in Resources */ = {isa = PBXBuildFile; fileRef = 39CBEADB1DDF998C0052DD78 /* ReSwift.framework */; };
 		B237A2686FC0FCF426429818 /* Pods_ReSwiftThunkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513FA997F3BC403B68BCD671 /* Pods_ReSwiftThunkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		27EB4EF51DDB54F000570EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27EB4EFF1DDB556900570EDB /* ThunkMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThunkMiddleware.swift; sourceTree = "<group>"; };
 		27EB4F011DDB557100570EDB /* ThunkAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThunkAction.swift; sourceTree = "<group>"; };
+		39CBEAD91DDF99620052DD78 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		39CBEADB1DDF998C0052DD78 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		438492F5F1A75A4902AA3708 /* Pods_ReSwiftThunk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReSwiftThunk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		513FA997F3BC403B68BCD671 /* Pods_ReSwiftThunkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReSwiftThunkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E36D20485BB0BEBAB6C19C /* Pods-ReSwiftThunk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReSwiftThunk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReSwiftThunk/Pods-ReSwiftThunk.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3165B8F2C1BD750F46264559 /* Pods_ReSwiftThunk.framework in Frameworks */,
+				39CBEADA1DDF99620052DD78 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 		27EB4EDB1DDB54F000570EDB = {
 			isa = PBXGroup;
 			children = (
+				39CBEADB1DDF998C0052DD78 /* ReSwift.framework */,
 				27EB4EE71DDB54F000570EDB /* ReSwiftThunk */,
 				27EB4EF21DDB54F000570EDB /* ReSwiftThunkTests */,
 				27EB4EE61DDB54F000570EDB /* Products */,
@@ -118,6 +122,7 @@
 		CFD0E04DE03A5F99D5788426 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39CBEAD91DDF99620052DD78 /* ReSwift.framework */,
 				438492F5F1A75A4902AA3708 /* Pods_ReSwiftThunk.framework */,
 				513FA997F3BC403B68BCD671 /* Pods_ReSwiftThunkTests.framework */,
 			);
@@ -223,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39CBEADC1DDF998C0052DD78 /* ReSwift.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +457,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReSwiftThunk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -472,6 +482,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReSwiftThunk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
